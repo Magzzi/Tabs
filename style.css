@@ -1,0 +1,86 @@
+.tab-title {
+    font-size: 5em;
+    font-family: Montserrat;
+    text-align: center;
+    margin: 0 0 0.5em 0;
+    text-transform: uppercase;
+}
+
+.tab-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 2.5em;
+    max-width: fit-content;
+}
+
+
+.tab-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+}
+
+.tab-list li {
+    display: inline;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 1.2em;
+}
+
+
+.tab-href {
+    text-decoration: none;
+    text-underline-offset: 0.3em;
+    color: #000;
+}
+
+.tab-href:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    color: #000;
+}
+
+.tab-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Montserrat;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.tab-display {
+    padding: 1em;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin-top: 1em;
+    height: 30em;
+}
+.tab-description {
+    
+    font-size: 1.5em;
+    padding: 1em;
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin-top: 1em;
+    font-family: Montserrat;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.tab-frame {
+    width: 100%; 
+    height: 100%; 
+    border: none;
+    display: block;
+}

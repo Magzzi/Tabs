@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Tabs</title>
+</head>
+<body>
+
+    <div class="tab-container">
+        <h1 class="tab-title">
+            Tabs
+        </h1>
+        <div class="tab-nav">
+            <nav>
+                <ul class="tab-list">
+                    <li class="tab-href" onclick="switchTabs(1)">First Tab</a></li>
+                    <li class="tab-href" onclick="switchTabs(2)">Second Tab</a></li>
+                    <li class="tab-href" onclick="switchTabs(3)">Third Tab</a></li>
+                    <button class="tab-btn">Add Tab</button>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="tab-content">
+            <!-- Tab Display -->
+             <div id="tab1" class="tab-display">
+                
+             </div>
+                
+             <p id="tab1" class="tab-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+             </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
