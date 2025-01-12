@@ -39,10 +39,12 @@
     padding: 0;
     flex-direction: row;
     flex-wrap: wrap;
+    display: flex;
 }
 
 .tab-list li {
-    display: inline;
+    display: flex;
+    align-items: center;
     gap: 1em;
     cursor: pointer;
     text-decoration: none;
@@ -106,4 +108,23 @@
     height: 100%; 
     border: none;
     display: block;
+}
+
+.close-btn {
+    background-color: red;
+    color: #ffffff; 
+    border: none;
+    border-radius: 50%; 
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 12px; 
+    padding: 0; 
+}
+
+.close-btn:hover {
+    background-color: #ff4848;
 }

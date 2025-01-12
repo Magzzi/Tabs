@@ -5,7 +5,6 @@ tabLinks = [
 ];
 
 let switchTabs = (index) => {
-    index = index - 1; // Adjust index to match the array's 0-based indexing
     const tabDisplays = document.getElementsByClassName("tab-display");
     
     if (tabDisplays.length > 0) {
@@ -40,9 +39,9 @@ let addNewTab = () => {
 const initializeTabs = () => {
   const tabList = document.getElementsByClassName("tab-list")[0];
   let strlst = "";
-
+  
   for (let i = 0; i < tabLinks.length; i++) {
-    strlst += `<li class="tab-href" onclick="switchTabs(${i+1})">${tabLinks[i].title}</a></li>`;
+    strlst += `<li class="tab-href" onclick="switchTabs(${i})">${tabLinks[i].title}<span><button class="close-btn" onclick="closeTab(${i})">x</button></span></li>`;
   }
 
   strlst += `<button class="tab-btn" onclick="addNewTab()">+</button>`;
@@ -51,9 +50,9 @@ const initializeTabs = () => {
   tabList.innerHTML = strlst;
 
   // Default iframe in the start
-
+  
   const tabDisplays = document.getElementsByClassName("tab-display"); // Access the collection
-  if (tabDisplays.length > 0) { // Ensure the collection is not empty
+  if (tabDisplays.length !== 0 && tabLinks.length > 0) { // Ensure the collection is not empty
     tabDisplays[0].innerHTML = `<iframe class="tab-frame" 
       src="${tabLinks[0].link}" 
       sandbox="allow-scripts allow-same-origin" 
@@ -61,8 +60,13 @@ const initializeTabs = () => {
       allow="autoplay; encrypted-media" 
       width="100%" 
       height="400"></iframe>`;
-  } else {
-    console.error("No elements with the class 'tab-display' were found.");
+  } else if (tabDisplays.length !== 0) {
+    tabDisplays[0].innerHTML = ""; // Clear display if no tabs exist
   }
+}
 
+const closeTab = (index) => {
+  tabLinks.splice(index, 1);
+  initializeTabs();
+  console.log(`tabLink Size = ${tabLinks.length}`)
 }
