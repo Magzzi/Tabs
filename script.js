@@ -47,6 +47,22 @@ const initializeTabs = () => {
 
   strlst += `<button class="tab-btn" onclick="addNewTab()">+</button>`;
 
+  
   tabList.innerHTML = strlst;
+
+  // Default iframe in the start
+
+  const tabDisplays = document.getElementsByClassName("tab-display"); // Access the collection
+  if (tabDisplays.length > 0) { // Ensure the collection is not empty
+    tabDisplays[0].innerHTML = `<iframe class="tab-frame" 
+      src="${tabLinks[0].link}" 
+      sandbox="allow-scripts allow-same-origin" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      width="100%" 
+      height="400"></iframe>`;
+  } else {
+    console.error("No elements with the class 'tab-display' were found.");
+  }
 
 }
