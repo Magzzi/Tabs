@@ -45,7 +45,7 @@ const initializeTabs = () => {
     strlst += `<li class="tab-href" onclick="switchTabs(${i+1})">${tabLinks[i].title}</a></li>`;
   }
 
-  strlst += `<button class="tab-btn" onclick="addNewTab()">Add Tab</button>`;
+  strlst += `<button class="tab-btn" onclick="addNewTab()">+</button>`;
 
   tabList.innerHTML = strlst;
 
